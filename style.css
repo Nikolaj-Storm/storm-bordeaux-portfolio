@@ -1,0 +1,479 @@
+
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Libre Baskerville', serif;
+    line-height: 1.6;
+    color: #2c2c2c;
+    background-color: #f4e2cf;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 1rem;
+    color: #581f27;
+}
+
+h1 { font-size: 2.5rem; }
+h2 { font-size: 2rem; }
+h3 { font-size: 1.5rem; }
+
+p {
+    margin-bottom: 1rem;
+}
+
+a {
+    color: #581f27;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #7a2730;
+}
+
+/* Layout */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+/* Header */
+.site-header {
+    background-color: rgba(248, 230, 207, 0.95);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(88, 31, 39, 0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+.site-header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.site-title {
+    font-size: 1.8rem;
+    margin: 0;
+}
+
+.site-title a {
+    color: #581f27;
+    font-weight: 700;
+}
+
+.main-nav {
+    display: flex;
+    gap: 2rem;
+}
+
+.main-nav a {
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+.main-nav a:hover,
+.main-nav a.active {
+    background-color: #581f27;
+    color: #f4e2cf;
+}
+
+/* Main Content */
+.main-content {
+    margin-top: 5rem;
+    min-height: calc(100vh - 10rem);
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 4rem 0;
+    background: linear-gradient(135deg, #f4e2cf 0%, #f0d9c0 100%);
+}
+
+.hero-title {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    animation: fadeInUp 0.8s ease-out;
+}
+
+.hero-subtitle {
+    font-size: 1.2rem;
+    color: #666;
+    max-width: 600px;
+    margin: 0 auto;
+    animation: fadeInUp 0.8s ease-out 0.2s both;
+}
+
+/* CTA Section */
+.cta-section {
+    padding: 4rem 0;
+}
+
+.cta-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.cta-card {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(88, 31, 39, 0.1);
+    transition: all 0.3s ease;
+    display: block;
+    animation: fadeInUp 0.8s ease-out;
+}
+
+.cta-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 30px rgba(88, 31, 39, 0.15);
+}
+
+.cta-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.cta-card h3 {
+    color: #581f27;
+    margin-bottom: 1rem;
+}
+
+.cta-card p {
+    color: #666;
+    margin: 0;
+}
+
+/* Page Header */
+.page-header {
+    text-align: center;
+    padding: 3rem 0;
+    border-bottom: 1px solid rgba(88, 31, 39, 0.1);
+    margin-bottom: 3rem;
+}
+
+.page-header h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.page-header p {
+    font-size: 1.1rem;
+    color: #666;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Blog Posts */
+.blog-posts {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.post-preview {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(88, 31, 39, 0.08);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.post-preview:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 25px rgba(88, 31, 39, 0.12);
+}
+
+.post-date {
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+}
+
+.post-title {
+    color: #581f27;
+    margin-bottom: 1rem;
+}
+
+.post-excerpt {
+    color: #555;
+    margin: 0;
+}
+
+/* Projects Grid */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+}
+
+.project-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(88, 31, 39, 0.08);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.project-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 25px rgba(88, 31, 39, 0.12);
+}
+
+.project-image {
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.project-title {
+    color: #581f27;
+    margin-bottom: 1rem;
+}
+
+.project-description {
+    color: #555;
+    margin-bottom: 1.5rem;
+}
+
+.tech-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.tech-tag {
+    background-color: #581f27;
+    color: white;
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+/* Papers List */
+.papers-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.paper-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(88, 31, 39, 0.08);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.paper-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 25px rgba(88, 31, 39, 0.12);
+}
+
+.paper-year {
+    color: #581f27;
+    font-weight: 700;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+}
+
+.paper-title {
+    color: #581f27;
+    margin-bottom: 0.5rem;
+}
+
+.paper-venue {
+    color: #666;
+    font-style: italic;
+    margin-bottom: 1rem;
+}
+
+.paper-description {
+    color: #555;
+    margin: 0;
+}
+
+/* Detail Pages */
+.detail-header {
+    border-bottom: 1px solid rgba(88, 31, 39, 0.1);
+    padding-bottom: 2rem;
+    margin-bottom: 2rem;
+}
+
+.detail-content {
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.8;
+}
+
+.detail-content h3 {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+.detail-content p {
+    margin-bottom: 1.5rem;
+}
+
+.back-link {
+    display: inline-block;
+    margin-bottom: 2rem;
+    color: #581f27;
+    font-weight: 500;
+}
+
+.back-link:hover {
+    text-decoration: underline;
+}
+
+/* Paper Detail Specific */
+.citation-box {
+    background: #f8f9fa;
+    border: 1px solid #e9ecef;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin: 2rem 0;
+}
+
+.citation-text {
+    font-family: 'Courier New', monospace;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+    line-height: 1.5;
+}
+
+.copy-citation-btn {
+    background: #581f27;
+    color: white;
+    border: none;
+    padding: 0.7rem 1.5rem;
+    border-radius: 6px;
+    cursor: pointer;
+    font-family: inherit;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+
+.copy-citation-btn:hover {
+    background: #7a2730;
+}
+
+.copy-citation-btn.copied {
+    background: #28a745;
+}
+
+.pdf-embed {
+    width: 100%;
+    height: 600px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin: 2rem 0;
+}
+
+/* Footer */
+.site-footer {
+    background-color: #581f27;
+    color: #f4e2cf;
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 4rem;
+}
+
+/* Clickable Cards */
+.clickable-card {
+    cursor: pointer;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 0 1rem;
+    }
+    
+    .site-header .container {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .main-nav {
+        gap: 1rem;
+    }
+    
+    .hero-title {
+        font-size: 2rem;
+    }
+    
+    .cta-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    h1 { font-size: 2rem; }
+    h2 { font-size: 1.5rem; }
+    h3 { font-size: 1.2rem; }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        padding: 2rem 0;
+    }
+    
+    .cta-section {
+        padding: 2rem 0;
+    }
+    
+    .page-header {
+        padding: 2rem 0;
+    }
+    
+    .cta-card,
+    .post-preview,
+    .project-card,
+    .paper-card {
+        padding: 1.5rem;
+    }
+}

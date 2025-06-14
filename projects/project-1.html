@@ -1,0 +1,88 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Research Analytics Platform - Nikolaj Storm Petersen</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container">
+            <h1 class="site-title"><a href="../index.html">Nikolaj Storm Petersen</a></h1>
+            <nav class="main-nav">
+                <a href="../blog.html">Blog</a>
+                <a href="../projects.html">Projects</a>
+                <a href="../papers.html">Papers</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="container">
+            <article class="detail-content">
+                <a href="../projects.html" class="back-link">← Back to Projects</a>
+                
+                <header class="detail-header">
+                    <h2>Research Analytics Platform</h2>
+                    <p>A comprehensive tool for analyzing academic research trends and citation networks</p>
+                </header>
+
+                <div class="project-content">
+                    <h3>Overview</h3>
+                    <p>The Research Analytics Platform is a web-based tool designed to help researchers, institutions, and funding agencies understand trends in academic research. By analyzing large datasets of publications, citations, and collaboration networks, the platform provides insights that would be impossible to discern through manual analysis.</p>
+
+                    <h3>Key Features</h3>
+                    <ul>
+                        <li><strong>Citation Network Analysis:</strong> Visualize how ideas flow through the academic community</li>
+                        <li><strong>Trend Detection:</strong> Identify emerging research areas before they become mainstream</li>
+                        <li><strong>Collaboration Mapping:</strong> Discover patterns in researcher and institutional partnerships</li>
+                        <li><strong>Impact Assessment:</strong> Measure research impact beyond traditional citation metrics</li>
+                        <li><strong>Geographic Analysis:</strong> Understand global research distribution and knowledge flows</li>
+                    </ul>
+
+                    <h3>Technical Implementation</h3>
+                    <p>The platform is built using a modern web stack optimized for handling large datasets and complex visualizations:</p>
+                    
+                    <p><strong>Backend:</strong> The Django framework provides a robust backend with RESTful APIs for data access. PostgreSQL serves as the primary database, with specialized indexing for fast citation lookups and network queries.</p>
+                    
+                    <p><strong>Data Processing:</strong> Python scripts handle data ingestion from multiple academic databases, including PubMed, arXiv, and institutional repositories. Natural language processing techniques extract themes and topics from abstracts and full texts.</p>
+                    
+                    <p><strong>Visualization:</strong> D3.js powers interactive visualizations, including network graphs, timeline charts, and geographical maps. The visualization layer is designed to handle datasets with millions of nodes and edges efficiently.</p>
+
+                    <h3>Impact and Usage</h3>
+                    <p>Since its launch, the platform has been used by over 200 research institutions worldwide. It has helped identify emerging research trends, inform funding decisions, and facilitate new collaborations between researchers in different fields.</p>
+
+                    <p>The platform's trend detection capabilities have been particularly valuable, correctly identifying several research areas that became major fields of study within 2-3 years of their emergence in the literature.</p>
+
+                    <h3>Future Development</h3>
+                    <p>Ongoing development focuses on incorporating real-time data feeds, expanding to include non-English publications, and developing machine learning models to predict research impact and identify potential breakthroughs.</p>
+
+                    <div class="tech-stack">
+                        <h3>Technologies Used</h3>
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">Django</span>
+                        <span class="tech-tag">D3.js</span>
+                        <span class="tech-tag">PostgreSQL</span>
+                        <span class="tech-tag">Redis</span>
+                        <span class="tech-tag">Docker</span>
+                        <span class="tech-tag">AWS</span>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; 2025 Nikolaj Storm Petersen. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>
